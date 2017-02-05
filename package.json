@@ -1,7 +1,7 @@
 {
     "name": "angular-library-starter",
     "version": "0.0.1",
-    "description": "Build a library compatible with Angular 2+, AoT compilation &amp; Tree shaking",
+    "description": "Build a library compatible with Angular, AoT compilation and Tree shaking",
     "main": "bundles/angular-library-starter.umd.js",
     "module": "index.js",
     "scripts": {

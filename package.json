@@ -1,0 +1,65 @@
+{
+    "name": "angular-library-starter",
+    "version": "0.0.1",
+    "description": "Build a library compatible with Angular 2+, AoT compilation &amp; Tree shaking",
+    "main": "bundles/angular-library-starter.umd.js",
+    "module": "index.js",
+    "scripts": {
+        "build": "node build.js",
+        "test": "karma start",
+        "pack-lib": "npm pack ./dist",
+        "publish-lib": "npm publish ./dist"
+    },
+    "typings": "index.d.ts",
+    "author": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/robisim74/angular-library-starter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/robisim74/angular-library-starter/issues"
+    },
+    "homepage": "https://github.com/robisim74/angular-library-starter",
+    "keywords": [
+        "angular",
+        "javascript",
+        "typescript"
+    ],
+    "license": "MIT",
+    "peerDependencies": {
+        "@angular/common": "^2.4.6",
+        "@angular/core": "^2.4.6"
+    },
+    "devDependencies": {
+        "@angular/common": "2.4.6",
+        "@angular/compiler": "2.4.6",
+        "@angular/compiler-cli": "2.4.6",
+        "@angular/core": "2.4.6",
+        "@angular/platform-browser": "2.4.6",
+        "@angular/platform-browser-dynamic": "2.4.6",
+        "@angular/platform-server": "2.4.6",
+        "@types/jasmine": "2.5.41",
+        "@types/node": "7.0.5",
+        "codelyzer": "2.0.0-beta.4",
+        "core-js": "2.4.1",
+        "jasmine-core": "2.5.2",
+        "karma": "1.4.1",
+        "karma-chrome-launcher": "2.0.0",
+        "karma-jasmine": "1.1.0",
+        "karma-sourcemap-loader": "0.3.7",
+        "karma-spec-reporter": "0.0.26",
+        "karma-webpack": "2.0.2",
+        "reflect-metadata": "0.1.9",
+        "rollup": "0.41.4",
+        "rxjs": "5.1.0",
+        "ts-helpers": "1.1.2",
+        "ts-loader": "2.0.0",
+        "tslint": "4.4.2",
+        "typescript": "2.0.10",
+        "webpack": "2.2.1",
+        "zone.js": "0.7.6",
+        "shelljs": "0.7.6",
+        "chalk": "1.1.3",
+        "uglify-js": "2.7.5"
+    }
+}

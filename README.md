@@ -2,20 +2,38 @@
 [![Build Status](https://travis-ci.org/robisim74/angular-library-starter.svg?branch=master)](https://travis-ci.org/robisim74/angular-library-starter)
 >Build a library compatible with Angular, AoT compilation &amp; Tree shaking.
 
-This starter allows you to create a library for **Angular 2+** apps written in TypeScript, ES6 or ES5. 
+This starter allows you to create a library for **Angular 2+** apps written in _TypeScript_, _ES6_ or _ES5_. 
 The project is based on the official _Angular_ modules.
 
 Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/master/CHANGELOG.md).
 
 ## Contents
-* [1 Customizing](#1)
-* [2 Unit testing](#2)
-* [3 Building](#3)
-* [4 Publishing](#4)
-* [5 Using the library](#5)
-* [6 What it is important to know](#6)
+* [1 Project structure](#1)
+* [2 Customizing](#2)
+* [3 Unit testing](#3)
+* [4 Building](#4)
+* [5 Publishing](#5)
+* [6 Using the library](#6)
+* [7 What it is important to know](#7)
 
-## <a name="1"/>1 Customizing
+## <a name="1"/>1 Project structure
+- Library:
+    - **src** folder for the classes
+    - **index.ts** entry point for all public APIs of the package
+    - **package.json** _npm_ options
+    - **rollup.config.js** _Rollup_ configuration for building the bundle
+    - **tsconfig-build.json** _ngc_ compiler options for _AoT compilation_
+    - **build.js** commands to build the library using _ShellJS_
+- Unit testing:
+    - **tests** folder for unit testing
+    - **karma.conf.js** _Karma_ configuration that uses _webpack_
+    - **spec.bundle.js** defines the files used by _webpack_
+    - **tsconfig.json** _TypeScript_ compiler options
+- Extra:
+    - **tslint.json** _TypeScript_ linter rules with _Codelyzer_
+    - **travis.yml** _Travis CI_ configuration
+
+## <a name="2"/>2 Customizing
 1. Update [Node & npm](https://docs.npmjs.com/getting-started/installing-node).
 
 2. Rename `angular-library-starter` everywhere to `my-library`.
@@ -39,12 +57,12 @@ so that the user can import only those he needs and optimize _Tree shaking_ of h
 7. Create unit tests in `tests` folder. 
 _Karma_ is configured to use _webpack_ only for `*.ts` files: if you need to test different formats, you have to update it.
 
-## <a name="2"/>2 Unit testing
+## <a name="3"/>3 Unit testing
 ```Shell
 npm test 
 ```
 
-## <a name="3"/>3 Building
+## <a name="4"/>4 Building
 The following command:
 ```Shell
 npm run build
@@ -64,16 +82,16 @@ Then you can install it in an app to test it:
 npm install [path]my-library-[version].tgz
 ```
 
-## <a name="4"/>4 Publishing
+## <a name="5"/>5 Publishing
 Before publishing the first time:
 - you can register your library on [Travis CI](https://travis-ci.org/): you have already configured `.travis.yml` file
-- you must have a user on the npm registry: [Publishing npm packages](https://docs.npmjs.com/getting-started/publishing-npm-packages)
+- you must have a user on the _npm_ registry: [Publishing npm packages](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 
 ```Shell
 npm run publish-lib
 ```
 
-## <a name="5"/>5 Using the library
+## <a name="6"/>6 Using the library
 ### Installing
 ```Shell
 npm install my-library --save 
@@ -92,7 +110,7 @@ No need to set up anything, just import it in your code.
 #### Rollup or webpack
 No need to set up anything, just import it in your code.
 #### AoT compilation
-The library is compatible with AoT compilation, just import it in your code.
+The library is compatible with _AoT compilation_, just import it in your code.
 #### Plain JavaScript
 Include the `umd` bundle in your `index.html`:
 ```Html
@@ -100,28 +118,28 @@ Include the `umd` bundle in your `index.html`:
 ```
 and use global `ng.my-library` namespace.
 
-## <a name="6"/>6 What it is important to know
+## <a name="7"/>7 What it is important to know
 1. `package.json`
 
-    * `"module": "index.js"` to use `import` & `export` with ES2015 module bundlers
+    * `"module": "index.js"` to use `import` & `export` with _ES2015_ module bundlers
     * `"peerDependencies"` the packages and their versions required by the library when it will be installed
 
 2. `tsconfig-build.json` file used by _ngc_ compiler
 
-    Compiler options:
-    * `"declaration": true` to emit TypeScript declaration files
-    * `"module": "es2015"` for compatibility with _AoT compilation_ & _Tree shaking_
-    * `"target": "es5"` for browsers compatibility
+    * Compiler options:
+        * `"declaration": true` to emit _TypeScript_ declaration files
+        * `"module": "es2015"` for compatibility with _AoT compilation_ & _Tree shaking_
+        * `"target": "es5"` for browsers compatibility
 
-    Angular Compiler Options:
-    * `"genDir": "aot"` generates folder for compiled files
-    * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
-    * `"strictMetadataEmit": true` without emitting metadata files, the library will not compatible with _AoT compilation_
+    * Angular Compiler Options:
+        * `"genDir": "aot"` generates folder for compiled files
+        * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
+        * `"strictMetadataEmit": true` without emitting metadata files, the library will not compatible with _AoT compilation_
 
 3. `rollup.config.js` file used to build the bundle
 
-    * `format: 'umd'` the _Universal Module Definition_ pattern is used by Angular for its bundles
-    * `moduleName: 'ng.angular-library-starter'` defines the global namespace used by JavaScript apps
+    * `format: 'umd'` the _Universal Module Definition_ pattern is used by _Angular_ for its bundles
+    * `moduleName: 'ng.angular-library-starter'` defines the global namespace used by _JavaScript_ apps
     * `external` & `globals` declare the external packages
 
 

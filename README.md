@@ -13,10 +13,11 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
 * [3 Unit testing](#3)
 * [4 Building](#4)
 * [5 Publishing](#5)
-* [6 Using the library](#6)
-* [7 What it is important to know](#7)
+* [6 Documentation](#6)
+* [7 Using the library](#7)
+* [8 What it is important to know](#8)
 
-## <a name="1"/>1 Project structure
+## <a name="1"></a>1 Project structure
 - Library:
     - **src** folder for the classes
     - **index.ts** entry point for all public APIs of the package
@@ -33,7 +34,7 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
     - **tslint.json** _TypeScript_ linter rules with _Codelyzer_
     - **travis.yml** _Travis CI_ configuration
 
-## <a name="2"/>2 Customizing
+## <a name="2"></a>2 Customizing
 1. Update [Node & npm](https://docs.npmjs.com/getting-started/installing-node).
 
 2. Rename `angular-library-starter` everywhere to `my-library`.
@@ -57,12 +58,12 @@ so that the user can import only those he needs and optimize _Tree shaking_ of h
 7. Create unit tests in `tests` folder. 
 _Karma_ is configured to use _webpack_ only for `*.ts` files: if you need to test different formats, you have to update it.
 
-## <a name="3"/>3 Unit testing
+## <a name="3"></a>3 Unit testing
 ```Shell
 npm test 
 ```
 
-## <a name="4"/>4 Building
+## <a name="4"></a>4 Building
 The following command:
 ```Shell
 npm run build
@@ -82,7 +83,7 @@ Then you can install it in an app to test it:
 npm install [path]my-library-[version].tgz
 ```
 
-## <a name="5"/>5 Publishing
+## <a name="5"></a>5 Publishing
 Before publishing the first time:
 - you can register your library on [Travis CI](https://travis-ci.org/): you have already configured `.travis.yml` file
 - you must have a user on the _npm_ registry: [Publishing npm packages](https://docs.npmjs.com/getting-started/publishing-npm-packages)
@@ -91,7 +92,14 @@ Before publishing the first time:
 npm run publish-lib
 ```
 
-## <a name="6"/>6 Using the library
+## <a name="6"></a>6 Documentation
+To generate the documentation, this starter uses [compodoc](https://github.com/compodoc/compodoc):
+```Shell
+npm run compodoc
+npm run compodoc-serve 
+```
+
+## <a name="7"></a>7 Using the library
 ### Installing
 ```Shell
 npm install my-library --save 
@@ -109,8 +117,6 @@ System.config({
 No need to set up anything, just import it in your code.
 #### Rollup or webpack
 No need to set up anything, just import it in your code.
-#### AoT compilation
-The library is compatible with _AoT compilation_, just import it in your code.
 #### Plain JavaScript
 Include the `umd` bundle in your `index.html`:
 ```Html
@@ -118,7 +124,10 @@ Include the `umd` bundle in your `index.html`:
 ```
 and use global `ng.my-library` namespace.
 
-## <a name="7"/>7 What it is important to know
+### AoT compilation
+The library is compatible with _AoT compilation_.
+
+## <a name="8"></a>8 What it is important to know
 1. `package.json`
 
     * `"module": "index.js"` to use `import` & `export` with _ES2015_ module bundlers
@@ -132,7 +141,7 @@ and use global `ng.my-library` namespace.
         * `"target": "es5"` for browsers compatibility
 
     * Angular Compiler Options:
-        * `"genDir": "aot"` generates folder for compiled files
+        * `"skipTemplateCodegen": true,` skips generating _ngfactories_ files
         * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
         * `"strictMetadataEmit": true` without emitting metadata files, the library will not compatible with _AoT compilation_
 
@@ -142,6 +151,11 @@ and use global `ng.my-library` namespace.
     * `moduleName: 'ng.angular-library-starter'` defines the global namespace used by _JavaScript_ apps
     * `external` & `globals` declare the external packages
 
+4. Server-side rendering
 
-##License
+    If you want the library will be compatible with server-side rendering:
+    * `window`, `document`, `navigator` and other browser types do not exist on the server
+    * don't manipulate the _nativeElement_ directly: use `Renderer`
+
+## License
 MIT

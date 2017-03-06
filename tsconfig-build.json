@@ -21,8 +21,8 @@
         "node_modules/zone.js/dist/zone.js.d.ts"
     ],
     "angularCompilerOptions": {
-        "genDir": "aot",
-        "annotateForClosureCompiler": true,
-        "strictMetadataEmit": true
+        "skipTemplateCodegen": true,
+        "strictMetadataEmit": true,
+        "annotateForClosureCompiler": true
     }
 }

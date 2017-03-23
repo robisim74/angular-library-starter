@@ -29,8 +29,8 @@
     ],
     "license": "MIT",
     "peerDependencies": {
-        "@angular/common": "^2.4.6",
-        "@angular/core": "^2.4.6"
+        "@angular/common": ">= 2.4.6 || >= 4.0.0-rc.6",
+        "@angular/core": ">= 2.4.6 || >= 4.0.0-rc.6"
     },
     "devDependencies": {
         "@angular/common": "2.4.6",

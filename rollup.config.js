@@ -1,10 +1,9 @@
 export default {
-    entry: './dist/index.js',
+    entry: './dist/modules/angular-library-starter.es5.js',
     dest: './dist/bundles/angular-library-starter.umd.js',
     format: 'umd',
-    // Global namespace.
-    moduleName: 'ng.angular-library-starter',
-    // External libraries.
+    exports: 'named',
+    moduleName: 'ng.angularLibraryStarter',
     external: [
         '@angular/core',
         '@angular/common',

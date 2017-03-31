@@ -9,4 +9,4 @@
 /**
  * Entry point for all public APIs of the package.
  */
-export * from './src/angular-library-starter';
+export * from './src/index';

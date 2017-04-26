@@ -10,7 +10,7 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
 ## Contents
 * [1 Project structure](#1)
 * [2 Customizing](#2)
-* [3 Unit testing](#3)
+* [3 Testing](#3)
 * [4 Building](#4)
 * [5 Publishing](#5)
 * [6 Documentation](#6)
@@ -25,8 +25,8 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
     - **rollup.config.js** _Rollup_ configuration for building the bundles
     - **tsconfig-build.json** _ngc_ compiler options for _AoT compilation_
     - **build.js** building process using _ShellJS_
-- Unit testing:
-    - **tests** folder for unit tests
+- Testing:
+    - **tests** folder for unit & integration tests
     - **karma.conf.js** _Karma_ configuration that uses _webpack_ to build the tests
     - **spec.bundle.js** defines the files used by _webpack_
     - **tsconfig.json** _TypeScript_ compiler options
@@ -55,10 +55,11 @@ so that the user can import only those he needs and optimize _Tree shaking_ of h
 
 6. Update in `rollup.config.js` file `external` & `globals` libraries with those that actually you use.
 
-7. Create unit tests in `tests` folder. 
+7. Create unit & integration tests in `tests` folder, or unit tests next to the things they test in `src` folder, always using `.spec.ts` extension. 
 _Karma_ is configured to use _webpack_ only for `*.ts` files: if you need to test different formats, you have to update it.
 
-## <a name="3"></a>3 Unit testing
+## <a name="3"></a>3 Testing
+The following command run unit & integration tests that are in the `tests` folder, and unit tests that are in `src` folder: 
 ```Shell
 npm test 
 ```

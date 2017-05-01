@@ -29,7 +29,6 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
     - **tests** folder for unit & integration tests
     - **karma.conf.js** _Karma_ configuration that uses _webpack_ to build the tests
     - **spec.bundle.js** defines the files used by _webpack_
-    - **tsconfig.json** _TypeScript_ compiler options
 - Extra:
     - **tslint.json** _TypeScript_ linter rules with _Codelyzer_
     - **travis.yml** _Travis CI_ configuration
@@ -135,7 +134,12 @@ The library is compatible with _AoT compilation_.
     * `"es2015": "./bundles/angular-library-starter.js"` _ES2015_ flat _ESM_ format, experimental _ES2015_ build
     * `"peerDependencies"` the packages and their versions required by the library when it will be installed
 
-2. `tsconfig-build.json` file used by _ngc_ compiler
+2. `tsconfig.json` file used by _TypeScript_ compiler
+
+    * Compiler options:
+        * `"strict": true` enables _TypeScript_ `strict` master option
+
+3. `tsconfig-build.json` file used by _ngc_ compiler
 
     * Compiler options:
         * `"declaration": true` to emit _TypeScript_ declaration files
@@ -146,13 +150,13 @@ The library is compatible with _AoT compilation_.
         * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
         * `"strictMetadataEmit": true` without emitting metadata files, the library will not compatible with _AoT compilation_
 
-3. `rollup.config.js` file used by _Rollup_
+4. `rollup.config.js` file used by _Rollup_
 
     * `format: 'umd'` the _Universal Module Definition_ pattern is used by _Angular_ for its bundles
     * `moduleName: 'ng.angularLibraryStarter'` defines the global namespace used by _JavaScript_ apps
     * `external` & `globals` declare the external packages
 
-4. Server-side prerendering
+5. Server-side prerendering
 
     If you want the library will be compatible with server-side prerendering:
     * `window`, `document`, `navigator` and other browser types do not exist on the server

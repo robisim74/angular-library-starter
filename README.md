@@ -52,7 +52,7 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
 I suggest you create different _modules_ for different functions, 
 so that the user can import only those he needs and optimize _Tree shaking_ of his app.
 
-6. Update in `rollup.config.js` file `external` & `globals` libraries with those that actually you use.
+6. Update in `rollup.config.js` file `globals` libraries with those that actually you use.
 
 7. Create unit & integration tests in `tests` folder, or unit tests next to the things they test in `src` folder, always using `.spec.ts` extension. 
 _Karma_ is configured to use _webpack_ only for `*.ts` files: if you need to test different formats, you have to update it.

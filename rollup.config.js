@@ -1,5 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 
+// Add here external dependencies that actually you use.
 const globals = {
     '@angular/core': 'ng.core',
     '@angular/common': 'ng.common',

@@ -72,7 +72,7 @@ npm run build
 - starts _AoT compilation_ using _ngc_ compiler
 - creates `dist` folder with all the files of distribution
 
-> If you get errors during the building process or bundles are not created, set _silent_ to false in the _build.js_ file to check what's going wrong: warnings on the first execution of _rollup_ are normal, and also the errors on _tsc_ are a known issue.
+> If bundles are not created, set _silent_ to false in the _build.js_ file to check what's going wrong: warnings on the first execution of _Rollup_ are normal, and also the errors on _Downleveling_ are a known issue.
 
 To test locally the npm package:
 ```Shell

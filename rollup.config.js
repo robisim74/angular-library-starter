@@ -4,10 +4,9 @@ import resolve from 'rollup-plugin-node-resolve';
 const globals = {
     '@angular/core': 'ng.core',
     '@angular/common': 'ng.common',
-    '@angular/forms': 'ng.forms',
-    '@angular/http': 'ng.http',
     'rxjs/Observable': 'Rx',
-    'rxjs/Observer': 'Rx'
+    'rxjs/Observer': 'Rx',
+    'rxjs/add/operator/map': 'Rx'
 };
 
 export default {

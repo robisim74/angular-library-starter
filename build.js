@@ -18,7 +18,7 @@ mkdir(`-p`, `./${BUNDLES_DIR}`);
 // https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts
 // https://github.com/mgechev/codelyzer
 echo(`Start TSLint`);
-exec(`tslint --project ./tsconfig.json --type-check ./src/**/*.ts`);
+exec(`tslint ./src/**/*.ts`);
 echo(chalk.green(`TSLint completed`));
 
 /* AoT compilation: ES2015 sources */

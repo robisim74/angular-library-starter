@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/robisim74/angular-library-starter.svg?branch=master)](https://travis-ci.org/robisim74/angular-library-starter)
 >Build an Angular library compatible with AoT compilation &amp; Tree shaking.
 
-This starter allows you to create a library for **Angular 2+** apps written in _TypeScript_, _ES6_ or _ES5_. 
+This starter allows you to create a library for **Angular 4+** apps written in _TypeScript_, _ES6_ or _ES5_. 
 The project is based on the official _Angular_ packages.
 
 Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/master/CHANGELOG.md).
@@ -71,8 +71,6 @@ npm run build
 - starts _TSLint_ with _Codelyzer_
 - starts _AoT compilation_ using _ngc_ compiler
 - creates `dist` folder with all the files of distribution
-
-> If bundles are not created, set _silent_ to false in the _build.js_ file to check what's going wrong: warnings on the first execution of _Rollup_ are normal, and also the errors on _Downleveling_ are a known issue.
 
 To test locally the npm package:
 ```Shell

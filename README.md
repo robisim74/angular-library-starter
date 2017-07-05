@@ -55,7 +55,7 @@ so that the user can import only those he needs and optimize _Tree shaking_ of h
 6. Update in `rollup.config.js` file `globals` external dependencies with those that actually you use.
 
 7. Create unit & integration tests in `tests` folder, or unit tests next to the things they test in `src` folder, always using `.spec.ts` extension. 
-_Karma_ is configured to use _webpack_ only for `*.ts` files: if you need to test different formats, you have to update it.
+_Karma_ is configured to use _webpack_ only for `*.ts` files.
 
 ## <a name="3"></a>3 Testing
 The following command run unit & integration tests that are in the `tests` folder, and unit tests that are in `src` folder: 
@@ -161,6 +161,10 @@ The library is compatible with _AoT compilation_.
     If you want the library will be compatible with server-side prerendering:
     * `window`, `document`, `navigator` and other browser types do not exist on the server
     * don't manipulate the _nativeElement_ directly
+
+## Built with this starter
+- [angular-l10n](https://github.com/robisim74/angular-l10n) *An Angular library to translate messages, dates and numbers*
+- [angular-auth-oidc-client](https://github.com/damienbod/angular-auth-oidc-client) *An OpenID Connect Implicit Flow client for Angular*
 
 ## License
 MIT

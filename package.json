@@ -13,7 +13,7 @@
         "compodoc": "compodoc -p tsconfig.json",
         "compodoc-serve": "compodoc -s"
     },
-    "typings": "./index.d.ts",
+    "typings": "./angular-library-starter.d.ts",
     "author": "",
     "repository": {
         "type": "git",

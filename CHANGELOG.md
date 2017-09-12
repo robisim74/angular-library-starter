@@ -1,5 +1,9 @@
 ## Angular library starter Changelog
 
+<a name="Sep 12, 2017"></a>
+### Sep 12, 2017
+* Rename _index.ts_ to package name.
+
 <a name="Jun 21, 2017"></a>
 ### Jun 21, 2017
 * Update _rollup.config_ and _tsconfig_ files

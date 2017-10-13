@@ -2,7 +2,7 @@
 
 <a name="Oct 14, 2017"></a>
 ### Oct 14, 2017
-* Add Istanbul to reports coverage.
+* Add Istanbul to report coverage.
 
 <a name="Sep 12, 2017"></a>
 ### Sep 12, 2017

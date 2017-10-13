@@ -62,6 +62,7 @@ The following command run unit & integration tests that are in the `tests` folde
 ```Shell
 npm test 
 ```
+It also reports coverage using Istanbul.
 
 ## <a name="4"></a>4 Building
 The following command:

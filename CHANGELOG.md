@@ -1,5 +1,9 @@
 ## Angular library starter Changelog
 
+<a name="Oct 14, 2017"></a>
+### Oct 14, 2017
+* Add Istanbul to reports coverage.
+
 <a name="Sep 12, 2017"></a>
 ### Sep 12, 2017
 * Rename _index.ts_ to package name.

@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/robisim74/angular-library-starter.svg?branch=master)](https://travis-ci.org/robisim74/angular-library-starter)
 >Build an Angular library compatible with AoT compilation &amp; Tree shaking.
 
-This starter allows you to create a library for **Angular 4+** apps written in _TypeScript_, _ES6_ or _ES5_. 
+This starter allows you to create a library for **Angular v5** apps written in _TypeScript_, _ES6_ or _ES5_. 
 The project is based on the official _Angular_ packages.
 
 Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/master/CHANGELOG.md).
@@ -22,7 +22,8 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
     - **src** folder for the classes
     - **public_api.ts** entry point for all public APIs of the package
     - **package.json** _npm_ options
-    - **rollup.config.js** _Rollup_ configuration for building the bundles
+    - **rollup.config.js** _Rollup_ configuration for building the _umd_ bundles
+    - **rollup.es.config.js** _Rollup_ configuration for building the _es2015_ bundles
     - **tsconfig-build.json** _ngc_ compiler options for _AoT compilation_
     - **build.js** building process using _ShellJS_
 - Testing:
@@ -36,13 +37,13 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
 ## <a name="2"></a>2 Customizing
 1. Update [Node & npm](https://docs.npmjs.com/getting-started/installing-node).
 
-2. Rename `angular-library-starter` and `angularLibraryStarter` everywhere to `my-library` and `myLibrary`.
+2. Rename `angular-library-starter` and `angularLibraryStarter` everywhere to `my-library` and `myLibrary`. Also update the `license-banner.txt` file.
 
 3. Update in `package.json` file:
     - version: [Semantic Versioning](http://semver.org/)
     - description
     - urls
-    - packages
+    - packages (optional)
 
     and run `npm install`.
 
@@ -58,7 +59,7 @@ so that the user can import only those he needs and optimize _Tree shaking_ of h
 _Karma_ is configured to use _webpack_ only for `*.ts` files.
 
 ## <a name="3"></a>3 Testing
-The following command run unit & integration tests that are in the `tests` folder, and unit tests that are in `src` folder: 
+The following command run unit & integration tests that are in the `tests` folder (you can change the folder in `spec.bundle.js` file): 
 ```Shell
 npm test 
 ```
@@ -130,9 +131,9 @@ The library is compatible with _AoT compilation_.
 1. `package.json`
 
     * `"main": "./bundles/angular-library-starter.umd.js"` legacy module format 
-    * `"module": "./bundles/angular-library-starter.es5.js"` flat _ES_ module, for using module bundlers such as _Rollup_ or _webpack_: 
+    * `"module": "./esm5/angular-library-starter.js"` flat _ES_ module, for using module bundlers such as _Rollup_ or _webpack_: 
     [package module](https://github.com/rollup/rollup/wiki/pkg.module)
-    * `"es2015": "./bundles/angular-library-starter.js"` _ES2015_ flat _ESM_ format, experimental _ES2015_ build
+    * `"es2015": "./esm2015/angular-library-starter.js"` _ES2015_ flat _ESM_ format, experimental _ES2015_ build
     * `"peerDependencies"` the packages and their versions required by the library when it will be installed
 
 2. `tsconfig.json` file used by _TypeScript_ compiler
@@ -149,7 +150,7 @@ The library is compatible with _AoT compilation_.
     * Angular Compiler Options:
         * `"skipTemplateCodegen": true,` skips generating _AoT_ files
         * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
-        * `"strictMetadataEmit": true` without emitting metadata files, the library will not compatible with _AoT compilation_
+        * `"strictMetadataEmit": true` without emitting metadata files, the library will not be compatible with _AoT compilation_: to report syntax errors immediately rather than produce a _.metadata.json_ file with errors
 
 4. `rollup.config.js` file used by _Rollup_
 
@@ -157,9 +158,9 @@ The library is compatible with _AoT compilation_.
     * `moduleName: 'ng.angularLibraryStarter'` defines the global namespace used by _JavaScript_ apps
     * `external` & `globals` declare the external packages
 
-5. Server-side prerendering
+5. Server Side Rendering
 
-    If you want the library will be compatible with server-side prerendering:
+    If you want the library will be compatible with Server Side Rendering:
     * `window`, `document`, `navigator` and other browser types do not exist on the server
     * don't manipulate the _nativeElement_ directly
 

@@ -10,7 +10,7 @@ In Angular v5, the building process creates the _es2015_ bundles in _esm2015_ fo
 and the _es5_ bundles in _esm5_ folder. If you want to upgrade to the new building process you have to:
 - use new _build.js_ (changing the _PACKAGE_ name), 
 - use new _rollup.config.js_ (updating _globals_ and _name_), _rollup.es.config.js_ and _tsconfig-build.js_ files
-- add the _license-banner.txt_ file
+- add the _license-banner.txt_ file (and customize it)
 - update in _package.json_:
     - _module_ and _es2015_ properties
     - packages: compare all the _devDependencies_

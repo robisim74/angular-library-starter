@@ -37,7 +37,7 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
 ## <a name="2"></a>2 Customizing
 1. Update [Node & npm](https://docs.npmjs.com/getting-started/installing-node).
 
-2. Rename `angular-library-starter` and `angularLibraryStarter` everywhere to `my-library` and `myLibrary`. Also update the `license-banner.txt` file.
+2. Rename `angular-library-starter` and `angularLibraryStarter` everywhere to `my-library` and `myLibrary`. Also customize the `license-banner.txt` file.
 
 3. Update in `package.json` file:
     - version: [Semantic Versioning](http://semver.org/)

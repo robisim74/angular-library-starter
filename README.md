@@ -171,5 +171,12 @@ The library is compatible with _AoT compilation_.
 - [ngx-typeahead](https://github.com/orizens/ngx-typeahead) *A simple but yet powerful typeahead component for Angular*
 - [ng2-youtube-player](https://github.com/orizens/ng2-youtube-player) *A Powerful Youtube Player Component for Angular*
 
+## Previous versions
+- **Angular v4**
+    - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v4)
+
+- **Angular v2**
+    - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v2)
+
 ## License
 MIT

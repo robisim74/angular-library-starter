@@ -43,7 +43,7 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
     - version: [Semantic Versioning](http://semver.org/)
     - description
     - urls
-    - packages (optional)
+    - packages (optional): make sure you use a version of _TypeScript_ compatible with _Angular Compiler_
 
     and run `npm install`.
 

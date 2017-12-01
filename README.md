@@ -170,7 +170,7 @@ The library is compatible with _AoT compilation_.
 - [ngx-infinite-scroll](https://github.com/orizens/ngx-infinite-scroll) *An infinite scroll directive for Angular compatible with AoT compilation and Tree shaking*
 - [ngx-typeahead](https://github.com/orizens/ngx-typeahead) *A simple but yet powerful typeahead component for Angular*
 - [ng2-youtube-player](https://github.com/orizens/ng2-youtube-player) *A Powerful Youtube Player Component for Angular*
-- [ng2-completer](https://github.com/oferh/ng2-completer) *Angular 2 autocomplete component*
+- [ng2-completer](https://github.com/oferh/ng2-completer) *Angular autocomplete component*
 
 ## Previous versions
 - **Angular v4**

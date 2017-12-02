@@ -164,7 +164,7 @@ The library is compatible with _AoT compilation_.
     * `window`, `document`, `navigator` and other browser types do not exist on the server
     * don't manipulate the _nativeElement_ directly
 
-## Angular 2 autocomplete component  this starter
+## Built with this starter
 - [angular-l10n](https://github.com/robisim74/angular-l10n) *An Angular library to translate messages, dates and numbers*
 - [angular-auth-oidc-client](https://github.com/damienbod/angular-auth-oidc-client) *An OpenID Connect Implicit Flow client for Angular*
 - [ngx-infinite-scroll](https://github.com/orizens/ngx-infinite-scroll) *An infinite scroll directive for Angular compatible with AoT compilation and Tree shaking*

@@ -1,6 +1,6 @@
 # angular-library-starter
 [![Build Status](https://travis-ci.org/robisim74/angular-library-starter.svg?branch=master)](https://travis-ci.org/robisim74/angular-library-starter)
->Build an Angular library compatible with AoT compilation &amp; Tree shaking.
+>Build an Angular library compatible with AoT compilation &amp; Tree shaking like an official package.
 
 This starter allows you to create a library for **Angular v5** apps written in _TypeScript_, _ES6_ or _ES5_. 
 The project is based on the official _Angular_ packages.
@@ -31,50 +31,72 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
     - **karma.conf.js** _Karma_ configuration that uses _webpack_ to build the tests
     - **spec.bundle.js** defines the files used by _webpack_
 - Extra:
-    - **tslint.json** _TypeScript_ linter rules with _Codelyzer_
+    - **tslint.json**  _Angular TSLint Preset_ (_TypeScript_ linter rules with _Codelyzer_)
     - **travis.yml** _Travis CI_ configuration
 
 ## <a name="2"></a>2 Customizing
 1. Update [Node & npm](https://docs.npmjs.com/getting-started/installing-node).
 
-2. Rename `angular-library-starter` and `angularLibraryStarter` everywhere to `my-library` and `myLibrary`. Also customize the `license-banner.txt` file.
+2. Rename `angular-library-starter` and `angularLibraryStarter` everywhere to `my-library` and `myLibrary`.
+
+3. Customize the `license-banner.txt` file with your library license.
 
 3. Update in `package.json` file:
     - version: [Semantic Versioning](http://semver.org/)
     - description
     - urls
-    - packages (optional): make sure you use a version of _TypeScript_ compatible with _Angular Compiler_
+    - packages (optional): make sure you use a version of _TypeScript_ compatible with _Angular Compiler_ (_@angular/compiler-cli@5.0.0_ requires a peer of _typescript@>=2.4.2 <2.5_)
 
     and run `npm install`.
 
-4. Create your classes in `src` folder, and export public classes in `my-library.ts`.
+4. Create your classes in `src` folder, and export public classes in `my-library.ts`: if you have _components_, note that this starter supports only _inline templates & styles_ as the official Angular building process. 
 
 5. You can create only one _module_ for the whole library: 
 I suggest you create different _modules_ for different functions, 
-so that the user can import only those he needs and optimize _Tree shaking_ of his app.
+so that the host app can only import the modules it uses, and optimize its _Tree shaking_.
 
-6. Update in `rollup.config.js` file `globals` external dependencies with those that actually you use.
+6. Update in `rollup.config.js` file `globals` external dependencies with those that actually you use to build the _umd_ bundle.
 
-7. Create unit & integration tests in `tests` folder, or unit tests next to the things they test in `src` folder, always using `.spec.ts` extension. 
-_Karma_ is configured to use _webpack_ only for `*.ts` files.
+7. Create unit & integration tests in `tests` folder, or unit tests next to the things they test in `src` folder, always using `.spec.ts` extension: note that _Karma_ is configured to use _webpack_ only for `*.ts` files.
 
 ## <a name="3"></a>3 Testing
 The following command run unit & integration tests that are in the `tests` folder (you can change the folder in `spec.bundle.js` file): 
 ```Shell
 npm test 
 ```
-It also reports coverage using Istanbul.
+It also reports coverage using _Istanbul_.
 
 ## <a name="4"></a>4 Building
 The following command:
 ```Shell
 npm run build
 ```
-- starts _TSLint_ with _Codelyzer_
+- starts _TSLint_ with _Codelyzer_ using _Angular TSLint Preset_
 - starts _AoT compilation_ using _ngc_ compiler
-- creates `dist` folder with all the files of distribution
-
-To test locally the npm package:
+- creates `dist` folder with all the files of distribution, following _Angular Package Format (APF) v5.0_:
+```
+└── dist
+    ├── bundles
+    |   ├── my-starter.umd.js
+    |   ├── my-starter.umd.js.map
+    |   ├── my-starter.umd.min.js
+    |   └── my-starter.umd.min.js.map
+    ├── esm5
+    |   ├── my-starter.js
+    |   └── my-starter.js.map
+    ├── esm2015
+    |   ├── my-starter.js
+    |   └── my-starter.js.map
+    ├── src
+    |   └── **/*.d.ts
+    ├── my-starter.d.ts
+    ├── my-starter.metadata.json
+    ├── LICENSE
+    ├── package.json
+    ├── public_api.d.ts
+    └── README
+```
+To test locally the npm package before publishing:
 ```Shell
 npm run pack-lib
 ```
@@ -150,7 +172,7 @@ The library is compatible with _AoT compilation_.
     * Angular Compiler Options:
         * `"skipTemplateCodegen": true,` skips generating _AoT_ files
         * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
-        * `"strictMetadataEmit": true` without emitting metadata files, the library will not be compatible with _AoT compilation_: to report syntax errors immediately rather than produce a _.metadata.json_ file with errors
+        * `"strictMetadataEmit": true` without emitting metadata files, the library will not be compatible with _AoT compilation_: it is intended to report syntax errors immediately rather than produce a _.metadata.json_ file with errors
 
 4. `rollup.config.js` file used by _Rollup_
 

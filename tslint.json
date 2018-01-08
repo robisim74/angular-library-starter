@@ -1,16 +1,8 @@
 {
-    "extends": "tslint:recommended",
-    "rulesDirectory": [
-        "node_modules/codelyzer"
+    "extends": [
+        "tslint-angular"
     ],
     "rules": {
-        "angular-whitespace": [
-            true,
-            "check-interpolation",
-            "check-pipe"
-        ],
-        "banana-in-box": true,
-        "templates-no-negated-async": true,
         "directive-selector": [
             true,
             "attribute",
@@ -28,38 +20,6 @@
                 "cmp-prefix2"
             ],
             "kebab-case"
-        ],
-        "use-input-property-decorator": true,
-        "use-output-property-decorator": true,
-        "use-host-property-decorator": true,
-        "no-attribute-parameter-decorator": true,
-        "no-input-rename": true,
-        "no-output-rename": true,
-        "no-forward-ref": true,
-        "use-view-encapsulation": false,
-        "use-life-cycle-interface": true,
-        "use-pipe-transform-interface": true,
-        "pipe-naming": [
-            true,
-            "camelCase",
-            "Pipe"
-        ],
-        "component-class-suffix": [
-            true,
-            "Component"
-        ],
-        "directive-class-suffix": [
-            true,
-            "Directive"
-        ],
-        "ordered-imports": [
-            false
-        ],
-        "quotemark": [
-            false
-        ],
-        "trailing-comma": [
-            false
         ]
     }
 }

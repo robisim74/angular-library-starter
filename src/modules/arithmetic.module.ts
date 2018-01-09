@@ -14,12 +14,10 @@ import { SumService } from '../services/sum.service';
         // Components.
     ]
 })
-/**
- * Consider registering providers using a forRoot() method
- * when the module exports components, directives or pipes that require sharing the same providers instances.
- * Consider registering providers also using a forChild() method
- * when they requires new providers instances or different providers in child modules. 
- */
+// Consider registering providers using a forRoot() method
+// when the module exports components, directives or pipes that require sharing the same providers instances.
+// Consider registering providers also using a forChild() method
+// when they requires new providers instances or different providers in child modules.
 export class ArithmeticModule {
 
     /**

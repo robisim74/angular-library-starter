@@ -77,20 +77,20 @@ npm run build
 ```
 └── dist
     ├── bundles
-    |   ├── my-starter.umd.js
-    |   ├── my-starter.umd.js.map
-    |   ├── my-starter.umd.min.js
-    |   └── my-starter.umd.min.js.map
+    |   ├── my-library.umd.js
+    |   ├── my-library.umd.js.map
+    |   ├── my-library.umd.min.js
+    |   └── my-library.umd.min.js.map
     ├── esm5
-    |   ├── my-starter.js
-    |   └── my-starter.js.map
+    |   ├── my-library.js
+    |   └── my-library.js.map
     ├── esm2015
-    |   ├── my-starter.js
-    |   └── my-starter.js.map
+    |   ├── my-library.js
+    |   └── my-library.js.map
     ├── src
     |   └── **/*.d.ts
-    ├── my-starter.d.ts
-    ├── my-starter.metadata.json
+    ├── my-library.d.ts
+    ├── my-library.metadata.json
     ├── LICENSE
     ├── package.json
     ├── public_api.d.ts
@@ -98,7 +98,7 @@ npm run build
 ```
 To test locally the npm package before publishing:
 ```Shell
-npm run pack-lib
+npm run pack:lib
 ```
 Then you can install it in an app to test it:
 ```Shell
@@ -111,14 +111,14 @@ Before publishing the first time:
 - you must have a user on the _npm_ registry: [Publishing npm packages](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 
 ```Shell
-npm run publish-lib
+npm run publish:lib
 ```
 
 ## <a name="6"></a>6 Documentation
 To generate the documentation, this starter uses [compodoc](https://github.com/compodoc/compodoc):
 ```Shell
 npm run compodoc
-npm run compodoc-serve 
+npm run compodoc:serve 
 ```
 
 ## <a name="7"></a>7 Using the library

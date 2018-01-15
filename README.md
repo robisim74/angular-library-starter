@@ -16,6 +16,7 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
 * [6 Documentation](#6)
 * [7 Using the library](#7)
 * [8 What it is important to know](#8)
+* [9 Inlining of templates and stylesheets](#9)
 
 ## <a name="1"></a>1 Project structure
 - Library:
@@ -60,7 +61,7 @@ so that the host app can only import the modules it uses, and optimize its _Tree
 7. Create unit & integration tests in `tests` folder, or unit tests next to the things they test in `src` folder, always using `.spec.ts` extension: note that _Karma_ is configured to use _webpack_ only for `*.ts` files.
 
 ## <a name="3"></a>3 Testing
-The following command run unit & integration tests that are in the `tests` folder (you can change the folder in `spec.bundle.js` file): 
+The following command runs unit & integration tests that are in the `tests` folder (you can change the folder in `spec.bundle.js` file): 
 ```Shell
 npm test 
 ```
@@ -185,6 +186,13 @@ The library is compatible with _AoT compilation_.
     If you want the library will be compatible with Server Side Rendering:
     * `window`, `document`, `navigator` and other browser types do not exist on the server
     * don't manipulate the _nativeElement_ directly
+
+## <a name="9"></a>9 Inlining of templates and stylesheets
+From _Angular Package Format v5.0_:
+
+> Component libraries are typically implemented using stylesheets and html templates stored in separate files. While it's not required, we suggest that component authors inline the templates and stylesheets into their FESM files as well as *.metadata.json files by replacing the stylesheetUrls and templateUrl with stylesheets and template metadata properties respectively. This simplifies consumption of the components by application developers.
+
+_ngc_ compiler still does not support inlining of templates & styles. But if you want, you can follow this suggestion: [Inlining of templates and stylesheets](https://github.com/robisim74/angular-library-starter/blob/master/INLINING.md).
 
 ## Built with this starter
 - [angular-l10n](https://github.com/robisim74/angular-l10n) *An Angular library to translate messages, dates and numbers*

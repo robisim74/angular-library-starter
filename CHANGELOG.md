@@ -1,5 +1,9 @@
 ## Angular library starter Changelog
 
+<a name="Jan 15, 2018"></a>
+### Jan 15, 2018
+* Add instructions for inlining of templates and stylesheets
+
 <a name="Nov 2, 2017"></a>
 ### Nov 2, 2017
 * Upgrade to Angular v5 building process

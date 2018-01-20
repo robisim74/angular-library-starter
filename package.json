@@ -1,5 +1,6 @@
 {
     "name": "angular-library-starter",
+    "private": true,
     "version": "0.0.1",
     "description": "Build an Angular library compatible with AoT compilation and Tree shaking like an official package",
     "main": "./bundles/angular-library-starter.umd.js",

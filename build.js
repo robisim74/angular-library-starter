@@ -2,7 +2,6 @@
 
 const shell = require('shelljs');
 const chalk = require('chalk');
-const fs = require('fs');
 
 const PACKAGE = `angular-library-starter`;
 const NPM_DIR = `dist`;
@@ -71,11 +70,6 @@ shell.rm(`-Rf`, `${NPM_DIR}/src/**/*.js.map`);
 
 shell.cp(`-Rf`, [`package.json`, `LICENSE`, `README.md`], `${NPM_DIR}`);
 
-const packageFile = `./${NPM_DIR}/package.json`;
-const packageContent = require(packageFile);
-packageContent.private = false;
-fs.writeFile(packageFile, JSON.stringify(packageContent, null, 4), function (err) {
-    if (err) return console.log(err);
-});
+shell.sed('-i', `"private": true,`, `"private": false,`, `./${NPM_DIR}/package.json`);
 
 shell.echo(chalk.green(`End building`));

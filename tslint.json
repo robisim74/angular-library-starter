@@ -1,7 +1,5 @@
 {
-    "extends": [
-        "tslint-angular"
-    ],
+    "extends": "./node_modules/tslint-angular/tslint.json",
     "rules": {
         "directive-selector": [
             true,

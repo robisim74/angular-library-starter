@@ -174,6 +174,7 @@ The library is compatible with _AoT compilation_.
         * `"skipTemplateCodegen": true,` skips generating _AoT_ files
         * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
         * `"strictMetadataEmit": true` without emitting metadata files, the library will not be compatible with _AoT compilation_: it is intended to report syntax errors immediately rather than produce a _.metadata.json_ file with errors
+        * `"flatModuleId": "@scope/package"` full package name has to include scope as well, otherwise AOT compilation will fail in the consumed application
 
 4. `rollup.config.js` file used by _Rollup_
 

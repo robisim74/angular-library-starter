@@ -65,6 +65,10 @@ The following command runs unit & integration tests that are in the `tests` fold
 ```Shell
 npm test 
 ```
+or in watch mode:
+```Shell
+npm test:watch
+```
 It also reports coverage using _Istanbul_.
 
 ## <a name="4"></a>4 Building

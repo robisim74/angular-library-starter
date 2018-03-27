@@ -35,7 +35,7 @@ Following are the steps to adapt the library to the use of external templates an
     shell.exec(`node-sass -r ${BUILD_DIR} -o ${BUILD_DIR}`);
     shell.rm(`-Rf`, `${BUILD_DIR}/**/*.scss`);
     shell.ls(`${BUILD_DIR}/**/*.css`).forEach(function (file) {
-        shell.mv(file, file.replace('.css', '.scss'));
+        shell.mv(file, file.replace('.scss', '.css'));
     });
 
     /* Inline templates & stylesheets */

@@ -206,6 +206,7 @@ _ngc_ compiler still does not support inlining of templates & styles. But if you
 - [ngx-typeahead](https://github.com/orizens/ngx-typeahead) *A simple but yet powerful typeahead component for Angular*
 - [ng2-youtube-player](https://github.com/orizens/ng2-youtube-player) *A Powerful Youtube Player Component for Angular*
 - [ng2-completer](https://github.com/oferh/ng2-completer) *Angular autocomplete component*
+- [ngx-store](https://github.com/zoomsphere/ngx-store) *Angular Storage library for managing `localStorage`, `sessionStorage` and cookies, allowing to watch storage changes. Includes easy-to-use decorators, services and API based on builder pattern.*
 
 ## Previous versions
 - **Angular v4**

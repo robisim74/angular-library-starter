@@ -1,5 +1,13 @@
 ## Angular library starter Changelog
 
+<a name="May 4, 2018"></a>
+### May 4, 2018
+* Upgrade to Angular v6 building process
+* Add support for inlining of templates & styles
+
+If you need to upgrade from v5 to v6, you can start from scratch or compare the following commit:
+- https://github.com/robisim74/angular-library-starter/commit/fbbe7e7f705acce89e4f0e47f5f0043df5cd3698
+
 <a name="Jan 15, 2018"></a>
 ### Jan 15, 2018
 * Add instructions for inlining of templates and stylesheets

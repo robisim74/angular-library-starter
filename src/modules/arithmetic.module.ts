@@ -1,17 +1,20 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
 import { SumService } from '../services/sum.service';
+import { SumComponent } from '../components/sum.component';
 
 @NgModule({
     declarations: [
         // Pipes.
         // Directives.
         // Components.
+        SumComponent
     ],
     exports: [
         // Pipes.
         // Directives.
         // Components.
+        SumComponent
     ]
 })
 // Consider registering providers using a forRoot() method

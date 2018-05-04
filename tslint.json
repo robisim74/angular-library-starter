@@ -7,8 +7,8 @@
             true,
             "attribute",
             [
-                "dir-prefix1",
-                "dir-prefix2"
+                "dir",
+                "dir"
             ],
             "camelCase"
         ],
@@ -16,8 +16,8 @@
             true,
             "element",
             [
-                "cmp-prefix1",
-                "cmp-prefix2"
+                "cmp",
+                "cmp"
             ],
             "kebab-case"
         ]

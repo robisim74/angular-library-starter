@@ -40,6 +40,7 @@ module.exports = function (config) {
 
         // webpack
         webpack: {
+            mode: 'development',
             resolve: {
                 extensions: ['.ts', '.js']
             },
@@ -49,9 +50,27 @@ module.exports = function (config) {
                         test: /\.ts/,
                         use: [
                             { loader: 'ts-loader' },
+                            { loader: 'angular2-template-loader' },
                             { loader: 'source-map-loader' }
                         ],
                         exclude: /node_modules/
+                    },
+                    {
+                        test: /\.html$/,
+                        use: 'raw-loader'
+                    },
+                    {
+                        test: /\.css$/,
+                        use: [
+                            { loader: 'to-string-loader' },
+                            { loader: 'css-loader' }]
+                    },
+                    {
+                        test: /\.scss$/,
+                        use: [
+                            { loader: 'raw-loader' },
+                            { loader: 'sass-loader' }
+                        ]
                     },
                     {
                         enforce: 'post',

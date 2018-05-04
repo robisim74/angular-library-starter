@@ -12,7 +12,7 @@ describe('SumService', () => {
         });
     });
 
-    it('should be calculate the sum',
+    it('should calculate the sum',
         inject([SumService],
             (sumService: SumService) => {
                 sumService.calculate(45, 78, 90, 674);

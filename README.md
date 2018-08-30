@@ -210,6 +210,7 @@ Now _ngc_ compiler supports inlining of templates & styles. Moreover, this start
 - [ng2-youtube-player](https://github.com/orizens/ng2-youtube-player) *A Powerful Youtube Player Component for Angular*
 - [ng2-completer](https://github.com/oferh/ng2-completer) *Angular autocomplete component*
 - [ngx-store](https://github.com/zoomsphere/ngx-store) *Angular Storage library for managing `localStorage`, `sessionStorage` and cookies, allowing to watch storage changes. Includes easy-to-use decorators, services and API based on builder pattern.*
+- [ngx-table-editor](https://github.com/maurei/ngx-table-editor) *A library for Angular that transforms HTML tables into dynamic editable components.*
 
 ## Previous versions
 - **Angular v5**

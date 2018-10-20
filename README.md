@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/robisim74/angular-library-starter.svg?branch=master)](https://travis-ci.org/robisim74/angular-library-starter)
 >Build an Angular library compatible with AoT compilation &amp; Tree shaking like an official package.
 
-This starter allows you to create a library for **Angular v6** apps written in _TypeScript_, _ES6_ or _ES5_. 
+This starter allows you to create a library for **Angular v7** apps written in _TypeScript_, _ES6_ or _ES5_. 
 The project is based on the official _Angular_ packages.
 
 Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/master/CHANGELOG.md).
@@ -78,7 +78,7 @@ npm run build
 ```
 - starts _TSLint_ with _Codelyzer_ using _Angular TSLint Preset_
 - starts _AoT compilation_ using _ngc_ compiler
-- creates `dist` folder with all the files of distribution, following _Angular Package Format (APF) v6.0_:
+- creates `dist` folder with all the files of distribution, following _Angular Package Format (APF)_:
 ```
 └── dist
     ├── bundles
@@ -213,6 +213,9 @@ Now _ngc_ compiler supports inlining of templates & styles. Moreover, this start
 - [ngx-table-editor](https://github.com/maurei/ngx-table-editor) *A library for Angular that transforms HTML tables into dynamic editable components.*
 
 ## Previous versions
+- **Angular v6**
+    - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v6)
+
 - **Angular v5**
     - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v5)
 

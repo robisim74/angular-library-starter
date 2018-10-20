@@ -1,5 +1,12 @@
 ## Angular library starter Changelog
 
+<a name="Oct 20, 2018"></a>
+### Oct 20, 2018
+* Upgrade to Angular v7 building process
+
+If you need to upgrade from v6 to v7, you can start from scratch or compare the following commit:
+- https://github.com/robisim74/angular-library-starter/commit/14091df1cc58c62aaa414aa95f75359b31a65aeb
+
 <a name="May 4, 2018"></a>
 ### May 4, 2018
 * Upgrade to Angular v6 building process

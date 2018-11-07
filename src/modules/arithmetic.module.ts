@@ -26,7 +26,7 @@ export class ArithmeticModule {
     /**
      * Use in AppModule: new instance of SumService.
      */
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders<ArithmeticModule> {
         return {
             ngModule: ArithmeticModule,
             providers: [SumService]
@@ -36,7 +36,7 @@ export class ArithmeticModule {
     /**
      * Use in features modules with lazy loading: new instance of SumService.
      */
-    public static forChild(): ModuleWithProviders {
+    public static forChild(): ModuleWithProviders<ArithmeticModule> {
         return {
             ngModule: ArithmeticModule,
             providers: [SumService]

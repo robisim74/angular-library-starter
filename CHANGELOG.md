@@ -1,5 +1,9 @@
 ## Angular library starter Changelog
 
+<a name="Nov 7, 2018"></a>
+### Nov 7, 2018
+* Add module type to _ModuleWithProviders_
+
 <a name="Oct 20, 2018"></a>
 ### Oct 20, 2018
 * Upgrade to Angular v7 building process

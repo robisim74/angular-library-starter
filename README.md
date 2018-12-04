@@ -17,6 +17,8 @@ Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/ma
 * [7 Using the library](#7)
 * [8 What it is important to know](#8)
 * [9 Inlining of templates and stylesheets](#9)
+* [Built with this starter](#built-with-this-starter)
+* [Previous versions](#previous-versions)
 
 ## <a name="1"></a>1 Project structure
 - Library:
@@ -202,7 +204,7 @@ The library is compatible with _AoT compilation_.
 ## <a name="9"></a>9 Inlining of templates and stylesheets
 Now _ngc_ compiler supports inlining of templates & styles. Moreover, this starter allows you to use `.scss` _sass_ files. If you need, you can use different pre-processors.
 
-## Built with this starter
+## <a name="built-with-this-starter"></a>Built with this starter
 - [angular-l10n](https://github.com/robisim74/angular-l10n) *An Angular library to translate messages, dates and numbers*
 - [angular-auth-oidc-client](https://github.com/damienbod/angular-auth-oidc-client) *An OpenID Connect Implicit Flow client for Angular*
 - [ngx-infinite-scroll](https://github.com/orizens/ngx-infinite-scroll) *An infinite scroll directive for Angular compatible with AoT compilation and Tree shaking*
@@ -211,8 +213,9 @@ Now _ngc_ compiler supports inlining of templates & styles. Moreover, this start
 - [ng2-completer](https://github.com/oferh/ng2-completer) *Angular autocomplete component*
 - [ngx-store](https://github.com/zoomsphere/ngx-store) *Angular Storage library for managing `localStorage`, `sessionStorage` and cookies, allowing to watch storage changes. Includes easy-to-use decorators, services and API based on builder pattern.*
 - [ngx-table-editor](https://github.com/maurei/ngx-table-editor) *A library for Angular that transforms HTML tables into dynamic editable components.*
+- [ngx-ui-scroll](https://github.com/dhilt/ngx-ui-scroll) *An Angular `*ngFor`-like directive for infinite/virtual scrolling*
 
-## Previous versions
+## <a name="previous-versions"></a>Previous versions
 - **Angular v6**
     - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v6)
 

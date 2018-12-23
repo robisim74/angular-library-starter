@@ -4,7 +4,7 @@ import { SumService } from '../services/sum.service';
 @Component({
     selector: 'cmp-sum',
     templateUrl: './sum.component.html',
-    styleUrls: ['./sum.component.scss']
+    styleUrls: ['./sum.component.css']
 })
 export class SumComponent implements OnInit {
 

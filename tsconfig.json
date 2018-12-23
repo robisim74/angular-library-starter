@@ -1,23 +1,34 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "emitDecoratorMetadata": true,
+        "declaration": true,
         "experimentalDecorators": true,
-        "strict": true,
-        "strictPropertyInitialization": false,
+        "emitDecoratorMetadata": true,
         "module": "commonjs",
         "moduleResolution": "node",
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "outDir": "dist",
+        "noFallthroughCasesInSwitch": true,
+        "paths": {
+            "rxjs/*": [
+                "node_modules/rxjs/*"
+            ],
+            "@angular/*": [
+                "node_modules/@angular/*"
+            ]
+        },
         "rootDir": ".",
-        "sourceMap": true,
-        "inlineSources": true,
-        "target": "es5",
-        "skipLibCheck": true,
+        "inlineSourceMap": true,
         "lib": [
             "es2015",
             "dom"
         ],
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "target": "es5",
         "typeRoots": [
-            "node_modules/@types/"
+            "node_modules/@types"
         ]
     },
     "exclude": [

@@ -1,0 +1,51 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@angular//:index.bzl", "ng_module", "ng_package")
+
+# Run the Angular AOT template compiler
+# https://angular.github.io/bazel-builds/src/ng_module.html#ng_module
+ng_module(
+    name = "root_module",
+    srcs = glob(
+        [
+            "*.ts",
+            "src/**/*.ts",
+        ],
+        exclude = [
+            "**/*.spec.ts"
+        ]
+    ),
+    assets = glob(
+        [
+            "*.css",
+            "*.html"
+        ]
+    ),
+    module_name = "angular-library-starter", # scoped
+    deps = [
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "@rxjs",
+        "@rxjs//operators",
+        "@npm//tslib",
+        "@npm//@types"
+    ],
+    flat_module_out_file = "angular-library-starter",
+    inline_resources = True,
+    tsconfig = "//:tsconfig-build.json"
+)
+
+# Produce an npm-ready package from the library
+# https://angular.github.io/bazel-builds/src/ng_package/ng_package.html#ng_package
+ng_package(
+    name = "angular-library-starter", # scoped
+    srcs = [
+        "package.json"
+    ],
+    entry_point = "index.js",
+    entry_point_name = "angular-library-starter",
+    deps = [":root_module"],
+    globals = {},
+    readme_md = "README.md",
+    license_banner = "license-banner.txt"
+)

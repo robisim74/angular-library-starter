@@ -1,19 +1,9 @@
 {
     "compilerOptions": {
-        "rootDir": ".",
-        "baseUrl": ".",
-        "paths": {
-            "@angular/*": [
-                "../../node_modules/@angular/*"
-            ],
-            "@rxjs/*": [
-                "../../node_modules/rxjs/*"
-            ]
-        },
-        "outDir": "../",
         "declaration": true,
         "strict": true,
         "strictPropertyInitialization": false,
+        "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
         "module": "es2015",
         "target": "es2015",
@@ -27,18 +17,9 @@
         "emitDecoratorMetadata": true,
         "sourceMap": true,
         "inlineSources": true,
-        "importHelpers": true
+        "importHelpers": false
     },
-    "files": [
-        "public_api.ts",
-        "../../node_modules/zone.js/dist/zone.js.d.ts"
-    ],
-    "angularCompilerOptions": {
-        "enableResourceInlining": true,
-        "skipTemplateCodegen": true,
-        "annotateForClosureCompiler": true,
-        "strictMetadataEmit": true,
-        "flatModuleOutFile": "angular-library-starter.js",
-        "flatModuleId": "angular-library-starter"
+    "bazelOptions": {
+        "suppressTsconfigOverrideWarnings": true
     }
 }

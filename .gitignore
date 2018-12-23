@@ -6,3 +6,5 @@ $ cat .gitignore
 
 *.log
 *.tgz
+
+/bazel-out

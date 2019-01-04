@@ -1,10 +1,7 @@
 $ cat .gitignore
 /node_modules
 /dist
-/documentation
-/coverage
-
-*.log
-*.tgz
-
 /bazel-out
+/documentation
+
+*.tgz

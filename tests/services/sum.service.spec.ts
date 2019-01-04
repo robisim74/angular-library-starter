@@ -1,6 +1,6 @@
-import { inject, TestBed } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 
-import { SumService } from './../../index';
+import { SumService } from '../../src/angular-library-starter';
 
 describe('SumService', () => {
 

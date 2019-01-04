@@ -1,13 +1,13 @@
-import { SumComponent, SumService } from '../../src/angular-library-starter';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 
-import { TestBed, ComponentFixture, async } from '@angular/core/testing';
+import { SumComponent, SumService } from '../../src/angular-library-starter';
 
 describe('Component: SumComponent', () => {
 
     let fixture: ComponentFixture<SumComponent>;
     let comp: SumComponent;
 
-    beforeEach(async () => {
+    beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [],
             providers: [

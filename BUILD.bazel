@@ -1,11 +1,28 @@
 package(default_visibility = ["//visibility:public"])
 
+exports_files(
+    [
+        "tsconfig.json"
+    ]
+)
+
+filegroup(
+    name = "web_test_bootstrap_scripts",
+    srcs = [
+        "@npm//node_modules/reflect-metadata:Reflect.js",
+        "@npm//node_modules/zone.js:dist/zone.js",
+        "@npm//node_modules/zone.js:dist/zone-testing.js",
+        "@npm//node_modules/zone.js:dist/task-tracking.js"
+    ]
+)
+
 load("@angular//:index.bzl", "ng_module", "ng_package")
+load("//tools:defaults.bzl", "PACKAGE_NAME", "PACKAGE_NAME_SCOPE", "LIBRARY_DEPS")
 
 # Run the Angular AOT template compiler
 # https://angular.github.io/bazel-builds/src/ng_module.html#ng_module
 ng_module(
-    name = "root_module",
+    name = "src",
     srcs = glob(
         [
             "*.ts",
@@ -21,16 +38,12 @@ ng_module(
             "*.html"
         ]
     ),
-    module_name = "angular-library-starter", # scoped
+    module_name = PACKAGE_NAME_SCOPE,
     deps = [
-        "@angular//packages/core",
-        "@angular//packages/common",
-        "@rxjs",
-        "@rxjs//operators",
         "@npm//tslib",
         "@npm//@types"
-    ],
-    flat_module_out_file = "angular-library-starter",
+    ] + LIBRARY_DEPS,
+    flat_module_out_file = PACKAGE_NAME,
     inline_resources = True,
     tsconfig = "//:tsconfig-build.json"
 )
@@ -38,13 +51,13 @@ ng_module(
 # Produce an npm-ready package from the library
 # https://angular.github.io/bazel-builds/src/ng_package/ng_package.html#ng_package
 ng_package(
-    name = "angular-library-starter", # scoped
+    name = PACKAGE_NAME_SCOPE,
     srcs = [
         "package.json"
     ],
     entry_point = "index.js",
-    entry_point_name = "angular-library-starter",
-    deps = [":root_module"],
+    entry_point_name = PACKAGE_NAME,
+    deps = [":src"],
     globals = {},
     readme_md = "README.md",
     license_banner = "license-banner.txt"

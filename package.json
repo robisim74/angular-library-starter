@@ -15,7 +15,7 @@
         "build:watch": "ibazel build :angular-library-starter",
         "build:dist": "bazel build :angular-library-starter --symlink_prefix=./dist/",
         "clean": "bazel clean --expunge",
-        "test": "karma start",
+        "test": "bazel test //tests/...",
         "test:watch": "karma start karma.conf.js --single-run false",
         "pack:lib": "npm run build && npm pack ./dist",
         "publish:lib": "npm run build && npm publish ./dist",

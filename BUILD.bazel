@@ -17,19 +17,24 @@ filegroup(
 )
 
 load("@angular//:index.bzl", "ng_module", "ng_package")
-load("//tools:defaults.bzl", "PACKAGE_NAME", "PACKAGE_NAME_SCOPE", "LIBRARY_DEPS")
+load("//tools:defaults.bzl", "PACKAGE_NAME", "PACKAGE_NAME_SCOPE", "LIBRARY_DEPS", "ROLLUP_GLOBALS")
 
 # Run the Angular AOT template compiler
 # https://angular.github.io/bazel-builds/src/ng_module.html#ng_module
 ng_module(
     name = "src",
+    module_name = PACKAGE_NAME_SCOPE,
+    deps = [
+        "@npm//tslib",
+        "@npm//@types"
+    ] + LIBRARY_DEPS,
     srcs = glob(
         [
             "*.ts",
             "src/**/*.ts",
         ],
         exclude = [
-            "**/*.spec.ts"
+            "src/**/*.spec.ts"
         ]
     ),
     assets = glob(
@@ -38,13 +43,9 @@ ng_module(
             "*.html"
         ]
     ),
-    module_name = PACKAGE_NAME_SCOPE,
-    deps = [
-        "@npm//tslib",
-        "@npm//@types"
-    ] + LIBRARY_DEPS,
+    entry_point = "public_api.ts",
     flat_module_out_file = PACKAGE_NAME,
-    inline_resources = True,
+    inline_resources = True, 
     tsconfig = "//:tsconfig-build.json"
 )
 
@@ -52,13 +53,15 @@ ng_module(
 # https://angular.github.io/bazel-builds/src/ng_package/ng_package.html#ng_package
 ng_package(
     name = PACKAGE_NAME_SCOPE,
+    deps = [
+        ":src"
+    ],
     srcs = [
         "package.json"
     ],
     entry_point = "index.js",
     entry_point_name = PACKAGE_NAME,
-    deps = [":src"],
-    globals = {},
+    globals = ROLLUP_GLOBALS,
     readme_md = "README.md",
     license_banner = "license-banner.txt"
 )

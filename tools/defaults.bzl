@@ -4,6 +4,11 @@
 PACKAGE_NAME = "angular-library-starter"
 PACKAGE_NAME_SCOPE = "angular-library-starter"
 
+# Add here additional Rollup globals (e.g. 'moment': 'moment')
+ROLLUP_GLOBALS = {
+
+}
+
 # Add here external library dependencies
 LIBRARY_DEPS = [
     "@angular//packages/core",

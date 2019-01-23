@@ -9,8 +9,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # Angular
 http_archive(
   name = "angular",
-  url = "https://github.com/angular/angular/archive/7.1.4.zip",
-  strip_prefix = "angular-7.1.4"
+  url = "https://github.com/angular/angular/archive/8.0.0-beta.1.zip",
+  strip_prefix = "angular-8.0.0-beta.1"
 )
 
 # RXJS 

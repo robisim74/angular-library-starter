@@ -1,7 +1,7 @@
 ## Angular library starter Changelog
 
-<a name="May 30, 2018"></a>
-### May 30, 2018
+<a name="May 30, 2019"></a>
+### May 30, 2019
 * Upgrade to Angular v8
 
 <a name="Nov 7, 2018"></a>

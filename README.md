@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/robisim74/angular-library-starter.svg?branch=master)](https://travis-ci.org/robisim74/angular-library-starter)
 >Build an Angular library compatible with AoT compilation &amp; Tree shaking like an official package.
 
-This starter allows you to create a library for **Angular v7** apps. 
+This starter allows you to create a library for **Angular** apps. 
 The project is based on the official _Angular_ packages.
 
 Get the [Changelog](https://github.com/robisim74/angular-library-starter/blob/master/CHANGELOG.md).
@@ -216,6 +216,9 @@ Now _ngc_ compiler supports inlining of templates & styles. Moreover, this start
 - [ngx-ui-scroll](https://github.com/dhilt/ngx-ui-scroll) *An Angular `*ngFor`-like directive for infinite/virtual scrolling*
 
 ## <a name="previous-versions"></a>Previous versions
+- **Angular v7**
+    - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v7)
+
 - **Angular v6**
     - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v6)
 

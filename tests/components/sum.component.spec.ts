@@ -1,13 +1,13 @@
 import { SumComponent, SumService } from '../../src/angular-library-starter';
 
-import { TestBed, ComponentFixture, async } from '@angular/core/testing';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 describe('Component: SumComponent', () => {
 
     let fixture: ComponentFixture<SumComponent>;
     let comp: SumComponent;
 
-    beforeEach(async () => {
+    beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [],
             providers: [
@@ -20,10 +20,10 @@ describe('Component: SumComponent', () => {
         comp = fixture.componentInstance;
     });
 
-    it('should render the sum', (() => {
+    it('should render the sum', () => {
         fixture.detectChanges();
 
         expect(fixture.debugElement.nativeElement.textContent).toContain('887');
-    }));
+    });
 
 });

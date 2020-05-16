@@ -34,10 +34,12 @@
         "../../node_modules/zone.js/dist/zone.js.d.ts"
     ],
     "angularCompilerOptions": {
-        "enableResourceInlining": true,
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true,
         "skipTemplateCodegen": true,
-        "annotateForClosureCompiler": true,
         "strictMetadataEmit": true,
+        "enableResourceInlining": true,
+        "enableIvy": false,
         "flatModuleOutFile": "angular-library-starter.js",
         "flatModuleId": "angular-library-starter"
     }

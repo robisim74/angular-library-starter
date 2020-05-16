@@ -1,5 +1,9 @@
 ## Angular library starter Changelog
 
+<a name="May 16, 2020"></a>
+### May 16, 2020
+* Upgrade to Angular v9. Thanks to @dhilt
+
 <a name="May 30, 2019"></a>
 ### May 30, 2019
 * Upgrade to Angular v8

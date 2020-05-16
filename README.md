@@ -160,7 +160,7 @@ Include the `umd` bundle in your `index.html`:
 and use global `ng.myLibrary` namespace.
 
 ### AoT compilation
-The library is compatible with _AoT compilation_.
+The library is compatible with _AoT & Ivy_.
 
 ## <a name="8"></a>8 What it is important to know
 1. `package.json`
@@ -185,9 +185,9 @@ The library is compatible with _AoT compilation_.
     * Angular Compiler Options:
         * `"enableResourceInlining": true` inlining of templates & styles
         * `"skipTemplateCodegen": true` skips generating _AoT_ files
-        * `"annotateForClosureCompiler": true` for compatibility with _Google Closure compiler_
         * `"strictMetadataEmit": true` without emitting metadata files, the library will not be compatible with _AoT compilation_: it is intended to report syntax errors immediately rather than produce a _.metadata.json_ file with errors
         * `"flatModuleId": "@scope/package"` full package name has to include scope as well, otherwise AOT compilation will fail in the consumed application
+        * `"enableIvy": false` libraries don't need to enable Ivy
 
 4. `rollup.config.js` file used by _Rollup_
 
@@ -205,7 +205,6 @@ The library is compatible with _AoT compilation_.
 Now _ngc_ compiler supports inlining of templates & styles. Moreover, this starter allows you to use `.scss` _sass_ files. If you need, you can use different pre-processors.
 
 ## <a name="built-with-this-starter"></a>Built with this starter
-- [angular-l10n](https://github.com/robisim74/angular-l10n) *An Angular library to translate messages, dates and numbers*
 - [angular-auth-oidc-client](https://github.com/damienbod/angular-auth-oidc-client) *An OpenID Connect Implicit Flow client for Angular*
 - [ngx-infinite-scroll](https://github.com/orizens/ngx-infinite-scroll) *An infinite scroll directive for Angular compatible with AoT compilation and Tree shaking*
 - [ngx-typeahead](https://github.com/orizens/ngx-typeahead) *A simple but yet powerful typeahead component for Angular*
@@ -216,6 +215,9 @@ Now _ngc_ compiler supports inlining of templates & styles. Moreover, this start
 - [ngx-ui-scroll](https://github.com/dhilt/ngx-ui-scroll) *An Angular `*ngFor`-like directive for infinite/virtual scrolling*
 
 ## <a name="previous-versions"></a>Previous versions
+- **Angular v8**
+    - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v8)
+
 - **Angular v7**
     - [Branch](https://github.com/robisim74/angular-library-starter/tree/angular_v7)
 

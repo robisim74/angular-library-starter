@@ -41,11 +41,11 @@ const globals = {
 export default {
     external: Object.keys(globals),
     plugins: [resolve(), sourcemaps()],
-    onwarn: () => { return },
+    onwarn: () => null,
     output: {
         format: 'umd',
         name: 'ng.angularLibraryStarter',
-        globals: globals,
+        globals,
         sourcemap: true,
         exports: 'named',
         amd: { id: 'angular-library-starter' }

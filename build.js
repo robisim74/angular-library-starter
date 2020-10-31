@@ -62,7 +62,7 @@ if (shell.exec(`rollup -c rollup.es.config.js -i ${NPM_DIR}/${PACKAGE}.js -o ${F
 }
 
 shell.echo(`Produce ESM5/FESM5 versions`);
-shell.exec(`ngc -p ${OUT_DIR}/tsconfig-build.json --target es5 -d false --outDir ${OUT_DIR_ESM5_ABS} --sourceMap`);
+shell.exec(`ngc -p ${OUT_DIR}/tsconfig-build.json --target es5 -d false --outDir "${OUT_DIR_ESM5_ABS}" --sourceMap`);
 shell.cp(`-Rf`, [`${OUT_DIR_ESM5}/src/`, `${OUT_DIR_ESM5}/*.js`, `${OUT_DIR_ESM5}/*.js.map`], `${ESM5_DIR}`);
 if (shell.exec(`rollup -c rollup.es.config.js -i ${OUT_DIR_ESM5}/${PACKAGE}.js -o ${FESM5_DIR}/${PACKAGE}.js`).code !== 0) {
     shell.echo(chalk.red(`Error: FESM5 version failed`));
